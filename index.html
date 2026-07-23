@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Girlfriend's Day ❤️</title>
+
+  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600;1,700&family=Poppins:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+
+  
+    <div class="custom-cursor" id="customCursor" aria-hidden="true"></div>
+    <div class="cursor-trail" id="cursorTrail" aria-hidden="true"></div>
+
+ 
+    <canvas class="particles-canvas" id="particlesCanvas" aria-hidden="true"></canvas>
+
+ 
+    <div class="music-player" id="musicPlayer" role="complementary" aria-label="Background Music Player">
+        <button class="music-btn" id="musicBtn" aria-label="Play background music" title="Play Music">
+            <svg class="music-icon play-icon" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M8 5v14l11-7z" fill="currentColor"/>
+            </svg>
+            <svg class="music-icon pause-icon" viewBox="0 0 24 24" width="24" height="24">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" fill="currentColor"/>
+            </svg>
+        </button>
+    </div>
+   
+    <audio id="bgMusic" loop preload="auto">
+        <source src="" type="audio/mpeg">
+    </audio>
+
+    <main id="mainContent">
+       
+        <section class="section landing-section" id="landing" aria-label="Landing">
+            <div class="aurora-bg" aria-hidden="true"></div>
+            <div class="landing-content">
+                <div class="landing-badge">
+                    <span class="badge-dot"></span>
+                    <span>August 1, 2026</span>
+                </div>
+                <h1 class="landing-title">
+                    <span class="title-line line-1">Happy Girlfriend's</span>
+                    <span class="title-line line-2">Day</span>
+                    <span class="title-heart">❤️</span>
+                </h1>
+                <h2 class="her-name" id="herName">Janka</h2>
+                <p class="landing-subtitle">This is a little journey made only for you.</p>
+                <button class="btn-begin" id="btnBegin" aria-label="Begin the journey">
+                    <span class="btn-text">Begin the Journey</span>
+                    <span class="btn-icon">✦</span>
+                    <span class="btn-ripple"></span>
+                </button>
+            </div>
+            <div class="scroll-hint" aria-hidden="true">
+                <span>Scroll to explore</span>
+                <svg class="scroll-chevron" viewBox="0 0 24 24" width="20" height="20">
+                    <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </section>
+        <section class="section story-section" id="story" aria-label="Our Story">
+            <div class="section-header">
+               
+                <h2 class="section-title">Our Story</h2>
+                <p class="section-subtitle">Every beautiful moment that led us here</p>
+            </div>
+            <div class="timeline" id="timeline">
+             
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <svg class="timeline-icon" viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="8" r="3" fill="currentColor" opacity="0.6"/></svg>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-date">The Beginning</span>
+                        <h3>The Day We First Met</h3>
+                        <p>The universe aligned and brought two souls together on an ordinary day a place no one expected(JAMB CENTER) but still that became extraordinary.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <svg class="timeline-icon" viewBox="0 0 24 24" width="28" height="28"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" fill="none" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="7" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-date">Discovery</span>
+                        <h3>Our First Conversation</h3>
+                        <p>Words flowed like they'd been waiting forever. I knew right then—you were different.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <svg class="timeline-icon" viewBox="0 0 24 24" width="28" height="28"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6.4-4.8-6.4 4.8 2.4-7.2-6-4.8h7.6z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-date">Magic</span>
+                        <h3>The First Time You Made Me Laugh</h3>
+                        <p>Your laughter became my favorite sound—a melody I never want to stop hearing.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <svg class="timeline-icon" viewBox="0 0 24 24" width="28" height="28"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-date">Realization</span>
+                        <h3>When I Knew You Were The One</h3>
+                        <p>My heart whispered what my mind already knew—you are everything I've ever wanted.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <svg class="timeline-icon" viewBox="0 0 24 24" width="28" height="28"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M12 6v6l4 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <span class="timeline-date">Forever</span>
+                        <h3>Every Beautiful Memory Since</h3>
+                        <p>And this is just the beginning of our forever. The best chapters are still unwritten.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section special-section" id="special" aria-label="What Makes You Special">
+            <div class="section-header">
+                <h2 class="section-title">What Makes You Special</h2>
+                <p class="section-subtitle">Things i adore about you</p>
+            </div>
+            <div class="floating-cards-container" id="floatingCards">
+            </div>
+        </section>
+        <section class="section letter-section" id="letter" aria-label="Love Letter">
+            <div class="section-header">
+             
+                <h2 class="section-title">A Letter</h2>
+                <p class="section-subtitle">Open to read my heart(i mean, site heart)😹</p>
+            </div>
+            <div class="envelope-wrapper" id="envelopeWrapper">
+                <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open love letter">
+                    <div class="envelope-flap"></div>
+                    <div class="envelope-body">
+                        <svg class="envelope-seal" viewBox="0 0 40 40" width="40" height="40">
+                            <circle cx="20" cy="20" r="18" fill="none" stroke="var(--rose-gold)" stroke-width="1.5"/>
+                            <path d="M20 8c-6 0-10 5-10 12s4 12 10 12 10-5 10-12-4-12-10-12zm0 4c3 0 6 3 6 8s-3 8-6 8-6-3-6-8 3-8 6-8z" fill="var(--rose-gold)" opacity="0.7"/>
+                            <text x="20" y="26" text-anchor="middle" fill="var(--rose-gold)" font-size="14" font-family="serif">❤</text>
+                        </svg>
+                    </div>
+                    <p class="envelope-hint">Click to open</p>
+                </div>
+                <div class="letter-paper glass-card" id="letterPaper" aria-hidden="true">
+                  <div class="letter-inner">
+    <p class="letter-line"><span class="typewriter-line">My Dearest Love,</span></p>
+    <p class="letter-line"><span class="typewriter-line"></span></p>
+
+    <p class="letter-line"><span class="typewriter-line">Happy Girlfriend's Day, my love. ❤️</span></p>
+    <p class="letter-line"><span class="typewriter-line">If there's one thing I'll never stop thanking</span></p>
+    <p class="letter-line"><span class="typewriter-line">God for, it's bringing you into my life.</span></p>
+
+    <p class="letter-line"><span class="typewriter-line"></span></p>
+
+    <p class="letter-line"><span class="typewriter-line">I'm still amazed that you chose me, even with</span></p>
+    <p class="letter-line"><span class="typewriter-line">everything you have going on. Knowing how busy</span></p>
+    <p class="letter-line"><span class="typewriter-line">you are makes me appreciate you even more.</span></p>
+
+    <p class="letter-line"><span class="typewriter-line"></span></p>
+
+    <p class="letter-line"><span class="typewriter-line">Thank you for your patience, your kindness,</span></p>
+    <p class="letter-line"><span class="typewriter-line">your understanding, and the love you give me</span></p>
+    <p class="letter-line"><span class="typewriter-line">every single day. You make my life brighter</span></p>
+    <p class="letter-line"><span class="typewriter-line">simply by being in it.</span></p>
+
+    <p class="letter-line"><span class="typewriter-line"></span></p>
+
+    <p class="letter-line"><span class="typewriter-line">I know I'm not perfect, but I promise to keep</span></p>
+    <p class="letter-line"><span class="typewriter-line">growing, learning, and loving you better than</span></p>
+    <p class="letter-line"><span class="typewriter-line">I did yesterday. I'll never stop choosing you.</span></p>
+
+    <p class="letter-line"><span class="typewriter-line"></span></p>
+
+    <p class="letter-line"><span class="typewriter-line">Whether life is easy or difficult, whether</span></p>
+    <p class="letter-line"><span class="typewriter-line">we're laughing or overcoming challenges, I</span></p>
+    <p class="letter-line"><span class="typewriter-line">want you to know that my heart is with you.</span></p>
+
+    <p class="letter-line"><span class="typewriter-line"></span></p>
+
+    <p class="letter-line"><span class="typewriter-line">Thank you for choosing me. I'll choose you</span></p>
+    <p class="letter-line"><span class="typewriter-line">today, tomorrow, and every day after.</span></p>
+
+    <p class="letter-line"><span class="typewriter-line"></span></p>
+
+    <p class="letter-line"><span class="typewriter-line">Happy Girlfriend's Day, my forever favourite.</span></p>
+    <p class="letter-line"><span class="typewriter-line">I love you more than words can ever say. ❤️</span></p>
+
+    <p class="letter-line"><span class="typewriter-line"></span></p>
+
+    <p class="letter-line"><span class="typewriter-line">Yours, always and forever.</span></p>
+</div>
+                </div>
+            </div>
+        </section>
+        <section class="section appreciation-section" id="appreciation" aria-label="Appreciation">
+            <div class="section-header">
+                <h2 class="section-title">Thank You For...</h2>
+                <p class="section-subtitle">Everything you are to me</p>
+            </div>
+            <div class="appreciation-grid">
+                <!-- 🔴 EDIT APPRECIATION CARDS -->
+                <div class="appreciation-card glass-card">
+                    <svg class="appreciation-icon" viewBox="0 0 24 24" width="32" height="32"><path d="M12 2l2.4 7.2h7.6l-6 4.8 2.4 7.2-6.4-4.8-6.4 4.8 2.4-7.2-6-4.8h7.6z" fill="var(--rose-gold)"/></svg>
+                    <h3>Choosing Me</h3>
+                    <p>Out of everyone, you chose my heart. That means everything.</p>
+                </div>
+                <div class="appreciation-card glass-card">
+                    <svg class="appreciation-icon" viewBox="0 0 24 24" width="32" height="32"><circle cx="12" cy="12" r="10" fill="none" stroke="var(--rose-gold)" stroke-width="1.5"/><path d="M12 6v6l4 2" fill="none" stroke="var(--rose-gold)" stroke-width="1.5"/></svg>
+                    <h3>Believing In Me</h3>
+                    <p>Your faith in me gives me wings to soar higher than I ever imagined.</p>
+                </div>
+                <div class="appreciation-card glass-card">
+                    <svg class="appreciation-icon" viewBox="0 0 24 24" width="32" height="32"><path d="M8 21h8a4 4 0 0 0 4-4V7a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v10a4 4 0 0 0 4 4z" fill="none" stroke="var(--rose-gold)" stroke-width="1.5"/><path d="M8 10h8M8 14h5" stroke="var(--rose-gold)" stroke-width="1.5"/></svg>
+                    <h3>Making Me Smile</h3>
+                    <p>Your humor and warmth brighten even my darkest days.</p>
+                </div>
+                <div class="appreciation-card glass-card">
+                    <svg class="appreciation-icon" viewBox="0 0 24 24" width="32" height="32"><path d="M12 2a6 6 0 0 1 6 6c0 4-6 12-6 12S6 12 6 8a6 6 0 0 1 6-6z" fill="none" stroke="var(--rose-gold)" stroke-width="1.5"/><circle cx="12" cy="8" r="2" fill="var(--rose-gold)"/></svg>
+                    <h3>Being Yourself</h3>
+                    <p>Your authenticity is breathtaking. Never change who you are.</p>
+                </div>
+                <div class="appreciation-card glass-card">
+                    <svg class="appreciation-icon" viewBox="0 0 24 24" width="32" height="32"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="var(--rose-gold)"/></svg>
+                    <h3>Staying With Me</h3>
+                    <p>Through every season, your love remains my constant.</p>
+                </div>
+            </div>
+        </section>
+
+     
+        <section class="section prayer-section" id="prayer" aria-label="Prayer">
+            <div class="golden-rays" aria-hidden="true">
+                <div class="ray ray-1"></div>
+                <div class="ray ray-2"></div>
+                <div class="ray ray-3"></div>
+                <div class="ray ray-4"></div>
+                <div class="ray ray-5"></div>
+            </div>
+            <div class="prayer-content">
+                <h2 class="section-title">A Prayer For You</h2>
+                <div class="prayer-text">
+                 
+                    <p>I pray that you always feel loved,</p>
+                    <p>That joy finds you in every season,</p>
+                    <p>That peace wraps around you like a warm embrace,</p>
+                    <p>And that you never forget how extraordinary you are.</p>
+                    <p class="prayer-amen">May your light continue to shine brightly, my love.</p>
+                </div>
+            </div>
+        </section>
+        <section class="section finale-section" id="finale" aria-label="Final Surprise">
+            <div class="finale-overlay" id="finaleOverlay"></div>
+            <canvas class="finale-canvas" id="finaleCanvas" aria-hidden="true"></canvas>
+            <div class="finale-content" id="finaleContent">
+                <div class="finale-heart-container" id="finaleHeart">
+                    <svg class="finale-heart-svg" viewBox="0 0 100 100" width="120" height="120">
+                        <path d="M50 88c-20-15-35-30-35-48 0-12 10-22 22-22 7 0 13 3 17 8 4-5 10-8 17-8 12 0 22 10 22 22 0 18-15 33-35 48z" fill="none" stroke="var(--rose-gold)" stroke-width="2" id="heartPath"/>
+                    </svg>
+                </div>
+              <div class="finale-text" id="finaleText">
+    <p class="finale-line line-choose">I choose you.</p>
+    <p class="finale-line line-again1">Again.</p>
+    <p class="finale-line line-again2">Again.</p>
+    <p class="finale-line line-again3">And again.</p>
+
+    <p class="finale-line line-heartbeat"></p>
+
+    <p class="finale-line line-message1">
+        Remember when I told you I felt breathless?
+    </p>
+
+    <p class="finale-line line-message2">
+        It wasn't because I was lost...
+    </p>
+
+    <p class="finale-line line-message3">
+        It was because I was running back to the place where my heart belongs.
+    </p>
+
+    <p class="finale-line line-message4">
+        It's you, Aisha.
+    </p>
+
+    <p class="finale-line line-message5">
+        It has always been you.
+    </p>
+
+    <p class="finale-line line-message6">
+        And it will always be you. ❤️
+    </p>
+</div>
+                <div class="finale-closing" id="finaleClosing">
+                    <h2 class="finale-gfd">Happy Girlfriend's Day ❤️</h2>
+                    <p class="finale-ily">I Love You</p>
+                </div>
+            </div>
+            <div class="confetti-container" id="confettiContainer" aria-hidden="true"></div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Made with infinite love ✨</p>
+     <p>Yours sincerely,<br>Your Temi ❤️</p>
+    </footer>
+
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
